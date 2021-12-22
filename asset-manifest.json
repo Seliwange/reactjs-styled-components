@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Seliwange/reactjs-styled-components/static/css/main.292038a6.css",
+    "main.js": "/Seliwange/reactjs-styled-components/static/js/main.d0eca9ff.js",
+    "index.html": "/Seliwange/reactjs-styled-components/index.html",
+    "main.292038a6.css.map": "/Seliwange/reactjs-styled-components/static/css/main.292038a6.css.map",
+    "main.d0eca9ff.js.map": "/Seliwange/reactjs-styled-components/static/js/main.d0eca9ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.292038a6.css",
+    "static/js/main.d0eca9ff.js"
+  ]
+}
