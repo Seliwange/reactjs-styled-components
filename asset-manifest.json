@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Seliwange/reactjs-styled-components/static/css/main.292038a6.css",
-    "main.js": "/Seliwange/reactjs-styled-components/static/js/main.d0eca9ff.js",
+    "main.js": "/Seliwange/reactjs-styled-components/static/js/main.cf6cd00a.js",
     "index.html": "/Seliwange/reactjs-styled-components/index.html",
     "main.292038a6.css.map": "/Seliwange/reactjs-styled-components/static/css/main.292038a6.css.map",
-    "main.d0eca9ff.js.map": "/Seliwange/reactjs-styled-components/static/js/main.d0eca9ff.js.map"
+    "main.cf6cd00a.js.map": "/Seliwange/reactjs-styled-components/static/js/main.cf6cd00a.js.map"
   },
   "entrypoints": [
     "static/css/main.292038a6.css",
-    "static/js/main.d0eca9ff.js"
+    "static/js/main.cf6cd00a.js"
   ]
 }
