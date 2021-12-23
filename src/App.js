@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/reactjs-styled-components/sign-in" element={<FormSignIn />} />
-        <Route path="/reactjs-styled-components/sign-up" element={<FormSignUp />} />
+        <Route path="reactjs-styled-components/sign-in" element={<FormSignIn />} />
+        <Route path="reactjs-styled-components/sign-up" element={<FormSignUp />} />
       </Routes>
       <GlobalStyle />
     </div>

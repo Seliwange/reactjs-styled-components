@@ -32,7 +32,7 @@ export default function FormSignIn(){
             </Button>
             <Form.LinkWrapper>
                 <Form.Link href="#">Forgot password?</Form.Link>
-                <Link to="/sign-up">Don't have an account? Sign Up</Link>
+                <Link to="/reactjs-styled-components/sign-up">Don't have an account? Sign Up</Link>
             </Form.LinkWrapper>
             <Form.Paragraph>Copyright @ Your Website 2021</Form.Paragraph>
         </Form.Wrapper>
