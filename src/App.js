@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router';
-import { createGlobalStyle } from 'styled-components';
 import './App.css';
 import FormSignIn from './components/FormSignIn/FormSignIn';
 import FormSignUp from './components/FormSignUp/FormSingUp';
+import { Routes, Route } from 'react-router';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="reactjs-styled-components/sign-in" element={<FormSignIn />} />
-        <Route path="reactjs-styled-components/sign-up" element={<FormSignUp />} />
+        <Route path="sign-in" element={<FormSignIn />} />
+        <Route path="sign-up" element={<FormSignUp />} />
       </Routes>
       <GlobalStyle />
     </div>
