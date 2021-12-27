@@ -38,10 +38,14 @@ const CheckboxSpan = styled.span`
         top: ${props => props.top || "25%"};
 `;
 
-export const Checkbox = ({label, top}) => (
+export const Checkbox = ({label, top, onChange, checked}) => (
     <CheckboxWrapper>
         <CheckboxLabel>
-            <CheckboxView type="checkbox" />
+            <CheckboxView 
+                type="checkbox" 
+                checked={checked}
+                onChange={onChange}
+            />
             <CheckboxSpan top={top} />
             {label}
         </CheckboxLabel>

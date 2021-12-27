@@ -16,11 +16,12 @@ const InputWrapper = styled.div`
     color: #505050;
 `;
 
-export const Input = ({placeholder, onChange, type, name, minlength}) => {
+export const Input = ({placeholder, onChange, type, name, minlength, value}) => {
     return(
         <InputWrapper>
             <InputView
                 placeholder={placeholder} 
+                value={value}
                 onChange={onChange}
                 required
                 type={type}

@@ -1,6 +1,7 @@
 import './App.css';
 import FormSignIn from './components/FormSignIn/FormSignIn';
 import FormSignUp from './components/FormSignUp/FormSingUp';
+import Main from './components/Main/Main';
 import { Routes, Route } from 'react-router';
 import { createGlobalStyle } from 'styled-components';
 
@@ -20,8 +21,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="sign-in" element={<FormSignIn />} />
-        <Route path="sign-up" element={<FormSignUp />} />
+        <Route path="reactjs-styled-components/" element={<Main />} />
+        <Route path="reactjs-styled-components/sign-in" element={<FormSignIn />} />
+        <Route path="reactjs-styled-components/sign-up" element={<FormSignUp />} />
       </Routes>
       <GlobalStyle />
     </div>
