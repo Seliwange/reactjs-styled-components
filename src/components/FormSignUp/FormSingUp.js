@@ -3,10 +3,14 @@ import {Input} from '../../common/Input';
 import {Form, Button} from '../FormSignIn/FormSignIn.view';
 import {MdLockOutline} from 'react-icons/md';
 import {Link} from 'react-router-dom';
+import { useLocalStorage } from '../../common/useLocalStorage';
 
 export default function FormSignUp(){
+    const [email, setEmail] = useLocalStorage("email", "");
+    const [password, setPassword] = useLocalStorage("password", "");
+
     return(
-        <Form.Wrapper>
+        <Form.Wrapper onSubmit={e => e.preventDefault()}>
             <Form.Header>
                 <Form.Icon>
                     <MdLockOutline />
@@ -19,23 +23,32 @@ export default function FormSignUp(){
                 <Input
                     type="text"
                     placeholder="First Name *"
-                    minlength="3"
+                    pattern=".{3,}" 
+                    title="At least three characters"
                 />
                 <Input
                     type="text"
                     placeholder="Last Name *"
-                    minlength="3"
+                    pattern=".{3,}" 
+                    title="At least three characters"
                 />
             </Form.InputWrapper>
             <Input 
                 type="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email Address *"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <Input 
                 type="password"
                 name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password *"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Eight or more characters, at least one number, one uppercase and lowercase letter"
             />
             <Checkbox label="I want to receive inspiration, marketing promotions and updates via email."></Checkbox>
             <Button>

@@ -10,13 +10,17 @@ const InputView = styled.input`
     background: transparent;
     color: white;
     margin-bottom: 20px;
+
+    &:focus{
+        outline: 1px solid ${props => (props.pattern === true) ? "green" : "red"};
+    }
 `;
 
 const InputWrapper = styled.div`
     color: #505050;
 `;
 
-export const Input = ({placeholder, onChange, type, name, minlength, value}) => {
+export const Input = ({placeholder, onChange, type, name, value, pattern, title}) => {
     return(
         <InputWrapper>
             <InputView
@@ -26,7 +30,8 @@ export const Input = ({placeholder, onChange, type, name, minlength, value}) => 
                 required
                 type={type}
                 name={name}
-                minlength={minlength}
+                pattern={pattern}
+                title={title}
             />
         </InputWrapper>
     );

@@ -11,7 +11,7 @@ export default function FormSignIn(){
     const [checked, setChecked] = useLocalStorage("checked", false);
 
     return(
-        <Form.Wrapper>
+        <Form.Wrapper onSubmit={e => e.preventDefault()}>
             <Form.Header>
                 <Form.Icon>
                     <MdLockOutline />
@@ -22,17 +22,20 @@ export default function FormSignIn(){
             </Form.Header>
             <Input 
                 type="email"
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                name="email"
                 placeholder="Email Address *"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <Input 
                 type="password"
+                name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                name="password"
                 placeholder="Password *"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Eight or more characters, at least one number, one uppercase and lowercase letter"
             />
             <Checkbox 
                 label="Remember me"
