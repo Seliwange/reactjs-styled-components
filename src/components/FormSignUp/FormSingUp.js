@@ -1,13 +1,14 @@
 import { Checkbox } from '../../common/Checkbox';
 import {Input} from '../../common/Input';
-import {Form, Button} from '../FormSignIn/FormSignIn.view';
+import {Form, Button} from '../FormView/Form.view';
 import {MdLockOutline} from 'react-icons/md';
 import {Link} from 'react-router-dom';
-import { useLocalStorage } from '../../common/useLocalStorage';
+import { useState } from 'react';
 
 export default function FormSignUp(){
-    const [email, setEmail] = useLocalStorage("email", "");
-    const [password, setPassword] = useLocalStorage("password", "");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [checked, setChecked] = useState(false);
 
     return(
         <Form.Wrapper onSubmit={e => e.preventDefault()}>
@@ -50,7 +51,10 @@ export default function FormSignUp(){
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Eight or more characters, at least one number, one uppercase and lowercase letter"
             />
-            <Checkbox label="I want to receive inspiration, marketing promotions and updates via email."></Checkbox>
+            <Checkbox 
+                label="I want to receive inspiration, marketing promotions and updates via email." 
+                onChange={() => setChecked(!checked)}
+            />
             <Button>
                 Sign Up
             </Button>

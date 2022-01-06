@@ -1,14 +1,14 @@
 import { Checkbox } from '../../common/Checkbox';
 import {Input} from '../../common/Input';
-import {Form, Button} from './FormSignIn.view';
+import {Form, Button} from '../FormView/Form.view';
 import {MdLockOutline} from 'react-icons/md';
 import {Link} from 'react-router-dom';
-import { useLocalStorage } from '../../common/useLocalStorage';
+import { useState } from 'react';
 
 export default function FormSignIn(){
-    const [email, setEmail] = useLocalStorage("email", "");
-    const [password, setPassword] = useLocalStorage("password", "");
-    const [checked, setChecked] = useLocalStorage("checked", false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [checked, setChecked] = useState(false);
 
     return(
         <Form.Wrapper onSubmit={e => e.preventDefault()}>
@@ -40,7 +40,7 @@ export default function FormSignIn(){
             <Checkbox 
                 label="Remember me"
                 checked={checked}
-                onChange={(e) => setChecked(e.target.value)} 
+                onChange={() => setChecked(!checked)} 
                 top="0"
             />
             <Button>
